@@ -1,7 +1,11 @@
-AWSTemplateFormatVersion: '2010-09-09'
-
 Resources:
   MyS3Bucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
     Properties:
-      BucketName: sam-test-codepipeline
+      BucketName: CodePipeline-test-s3
+
+  MyIAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: my-s3-bucket-role
+      # Other IAM role properties...
